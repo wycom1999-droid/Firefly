@@ -1,6 +1,6 @@
 backend:
   name: turbo-github
-  turbo_site_id: "替换为你的 Site ID"
+  turbo_site_id: "Ov23ctCQbZR37z5hQLlR"
   branch: master
 
 site_url: https://blog.wyjzp.top
