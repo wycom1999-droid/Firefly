@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: wycom1999-droid/Firefly
+  branch: main
+
+site_url: https://blog.wyjzp.top
+display_url: https://blog.wyjzp.top
+logo_url: https://blog.wyjzp.top/favicon.svg
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+publish_mode: simple
+
+locale: zh_Hans
+
+collections:
+  - name: posts
+    label: 博客文章
+    label_singular: 文章
+    folder: src/content/posts
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields:
+      - published
+      - title
+    fields:
+      - label: 标题
+        name: title
+        widget: string
+      - label: 发布时间
+        name: published
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: 文章摘要
+        name: description
+        widget: text
+        required: false
+      - label: 封面图片
+        name: image
+        widget: image
+        required: false
+      - label: 分类
+        name: category
+        widget: string
+        required: false
+      - label: 标签
+        name: tags
+        widget: list
+        required: false
+      - label: 草稿
+        name: draft
+        widget: boolean
+        default: true
+      - label: 正文
+        name: body
+        widget: markdown
